@@ -11,4 +11,10 @@ class ArithmeticSeriesTest {
 		assertEquals(sum(new int[] { 1, 3, 2, 5, 4 }), 15);
 		assertEquals(sum(new int[] { 1, 6, 2, 8, 4, 7, 5, 3 }), 36);
 	}
+
+	@Test
+	void testStreamSum() {
+		assertEquals(streamSum(new int[] { 1, 3, 2, 5, 4 }), 15);
+		assertEquals(streamSum(new int[] { 1, 6, 2, 8, 4, 7, 5, 3 }), 36);
+	}
 }
