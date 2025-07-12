@@ -29,30 +29,27 @@ public class Recursion {
 		return palindrome(str.substring(1, str.length() - 1));
 	}
 
-	/**
-	 * Computes the power of a real number
-	 * 
-	 * @implNote time complexity O(log_2(n)) - logarithmic time
-	 * @param x the number to compute power for
-	 * @param n the power to raise
-	 */
-	public static long power(int x, int n) {
-		boolean isEven = n % 2 == 0;
-		if (n == 0) {
-			return 1;
-		}
-		if (n < 0) {
-			return 1 / power(x, -n);
-		}
-		if (!isEven) {
-			return x * power(x, n - 1);
-		}
-		if (isEven) {
-			var y = power(x, n / 2);
-			return y * y;
-		}
-		return 1;
-	}
+    /**
+     * Computes the power of a real number.
+     *
+     * @implNote time complexity O(log_2(n)) - logarithmic time
+     * @param x the number to compute power for
+     * @param n the exponent
+     * @return {@code x} raised to {@code n}
+     */
+    public static double power(int x, int n) {
+            if (n == 0) {
+                    return 1;
+            }
+            if (n < 0) {
+                    return 1.0 / power(x, -n);
+            }
+            if (n % 2 != 0) {
+                    return x * power(x, n - 1);
+            }
+            double y = power(x, n / 2);
+            return y * y;
+    }
 
 	/**
 	 * Recursion to solve fibonacci sequence

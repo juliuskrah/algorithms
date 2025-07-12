@@ -22,15 +22,15 @@ class RecursionTest {
 		assertTrue(palindrome("rotor"));
 	}
 	
-	@Test
-	void testPower() {
-		assertEquals(power(3, 0), 1);
-		assertEquals(power(3, 1), 3);
-		assertEquals(power(3, 2), 9);
-		assertEquals(power(3, -1), 1 / 3);
-		assertEquals(power(3, 3), 27);
-		assertEquals(power(4, 2), 16);
-	}
+        @Test
+        void testPower() {
+                assertEquals(1.0, power(3, 0));
+                assertEquals(3.0, power(3, 1));
+                assertEquals(9.0, power(3, 2));
+                assertEquals(1.0 / 3.0, power(3, -1), 1e-9);
+                assertEquals(27.0, power(3, 3));
+                assertEquals(16.0, power(4, 2));
+        }
 	
 	@Test
 	void testFibonacci() {
